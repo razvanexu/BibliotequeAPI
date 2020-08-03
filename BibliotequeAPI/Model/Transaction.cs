@@ -7,7 +7,7 @@ namespace BibliotequeAPI.Model
 {
     public class Transaction
     {
-        public string AuthToken { get; set; }
+        public int TransactionId { get; set; }
         public int BookId { get; set; }
         public DateTime BorrowTime { get; set; }
     }
