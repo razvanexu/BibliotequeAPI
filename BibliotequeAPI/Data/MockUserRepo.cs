@@ -8,20 +8,20 @@ namespace BibliotequeAPI.Data
 {
     public class MockUserRepo : IUserRepo
     {
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<UserModel> GetAllUsers()
         {
-            var users = new List<User>
+            var users = new List<UserModel>
             {
-                new User { UserId = 0, FirstName = "Adriano", LastName = "Celentano", Password = "1234", Type = "Admin" },
-                new User { UserId = 1, FirstName = "Al", LastName = "Bano", Password = "4321", Type = "Admin" },
-                new User { UserId = 2, FirstName = "Romina", LastName = "Power", Password = "1235", Type = "Admin" }
+                new UserModel { UserId = 0, FirstName = "Adriano", LastName = "Celentano", Password = "1234", Type = "Admin" },
+                new UserModel { UserId = 1, FirstName = "Al", LastName = "Bano", Password = "4321", Type = "Admin" },
+                new UserModel { UserId = 2, FirstName = "Romina", LastName = "Power", Password = "1235", Type = "Admin" }
             };
             return users;
         }
 
-        public User GetUserById(int userId)
+        public UserModel GetUserById(int userId)
         {
-            return new User { UserId = 0, FirstName = "Adriano", LastName = "Celentano", Password = "1234", Type = "Admin" };
+            return new UserModel { UserId = 0, FirstName = "Adriano", LastName = "Celentano", Password = "1234", Type = "Admin" };
         }
     }
 }

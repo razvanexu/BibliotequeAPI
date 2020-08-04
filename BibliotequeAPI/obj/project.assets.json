@@ -5002,23 +5002,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\razvan dumitrescu\\.nuget\\packages\\": {},
+    "C:\\Users\\razva\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Pers\\BibliotequeAPI\\BibliotequeAPI\\BibliotequeAPI.csproj",
+      "projectUniqueName": "C:\\Courses\\TemaFinalM4\\BibliotequeAPI\\BibliotequeAPI.csproj",
       "projectName": "BibliotequeAPI",
-      "projectPath": "C:\\Pers\\BibliotequeAPI\\BibliotequeAPI\\BibliotequeAPI.csproj",
-      "packagesPath": "C:\\Users\\razvan dumitrescu\\.nuget\\packages\\",
-      "outputPath": "C:\\Pers\\BibliotequeAPI\\BibliotequeAPI\\obj\\",
+      "projectPath": "C:\\Courses\\TemaFinalM4\\BibliotequeAPI\\BibliotequeAPI.csproj",
+      "packagesPath": "C:\\Users\\razva\\.nuget\\packages\\",
+      "outputPath": "C:\\Courses\\TemaFinalM4\\BibliotequeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\razvan dumitrescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\razva\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -5082,7 +5082,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,7 +8,7 @@ namespace BibliotequeAPI.Data
 {
     public interface ITransaction
     {
-        IEnumerable<Transaction> GetAllTransactions();
-        Transaction GetTransactionById(int transactionId);
+        IEnumerable<TransactionModel> GetAllTransactions();
+        TransactionModel GetTransactionById(int transactionId);
     }
 }

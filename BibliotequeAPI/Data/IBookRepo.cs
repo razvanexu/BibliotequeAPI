@@ -8,7 +8,7 @@ namespace BibliotequeAPI.Data
 {
     public interface IBookRepo
     {
-        IEnumerable<Book> GetAllBooks();
-        Book GetBookById(int bookId);
+        IEnumerable<BookModel> GetAllBooks();
+        BookModel GetBookById(int bookId);
     }
 }

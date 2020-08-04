@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace BibliotequeAPI.Model
 {
-    public class Transaction
+    public class BookModel
     {
-        public int TransactionId { get; set; }
         public int BookId { get; set; }
-        public DateTime BorrowTime { get; set; }
+        public string BookName { get; set; }
+        public string BookAuthor { get; set; }
+        public string BookDescription { get; set; }
     }
 }

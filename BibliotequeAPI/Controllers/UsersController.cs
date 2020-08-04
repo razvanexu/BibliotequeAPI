@@ -24,7 +24,7 @@ namespace BibliotequeAPI.Controllers
 
         //GET api/users
         [HttpGet]
-        public ActionResult<IEnumerable<User>> GetAllUsers()
+        public ActionResult<IEnumerable<UserModel>> GetAllUsers()
         {
             var userItems = _usersRepo.GetAllUsers();
             return Ok(userItems);
@@ -32,7 +32,7 @@ namespace BibliotequeAPI.Controllers
 
         //GET api/users/{id}
         [HttpGet("{id}")]
-        public ActionResult<User>GetUserById(int userId)
+        public ActionResult<UserModel>GetUserById(int userId)
         {
             var userItems = _usersRepo.GetUserById(userId);
             return Ok(userItems);

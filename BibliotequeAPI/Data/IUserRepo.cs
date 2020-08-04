@@ -8,7 +8,7 @@ namespace BibliotequeAPI.Data
 {
     public interface IUserRepo
     {
-        IEnumerable<User> GetAllUsers();
-        User GetUserById(int userId);
+        IEnumerable<UserModel> GetAllUsers();
+        UserModel GetUserById(int userId);
     }
 }

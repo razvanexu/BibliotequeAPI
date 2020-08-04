@@ -30,7 +30,9 @@ namespace BibliotequeAPI
         {
             services.AddDbContext<UserContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("BibliotequeConnection")));
             services.AddControllers();
-            services.AddScoped<IUserRepo, MockUserRepo>();
+            //services.AddScoped<IUserRepo, MockUserRepo>();
+            services.AddScoped<IUserRepo, SQLUserRepo>();
+
 
         }
 

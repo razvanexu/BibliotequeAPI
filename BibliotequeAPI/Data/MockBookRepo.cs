@@ -8,12 +8,12 @@ namespace BibliotequeAPI.Data
 {
     public class MockBookRepo : IBookRepo
     {
-        public IEnumerable<Book> GetAllBooks()
+        public IEnumerable<BookModel> GetAllBooks()
         {
             throw new NotImplementedException();
         }
 
-        public Book GetBookById(int bookId)
+        public BookModel GetBookById(int bookId)
         {
             throw new NotImplementedException();
         }
