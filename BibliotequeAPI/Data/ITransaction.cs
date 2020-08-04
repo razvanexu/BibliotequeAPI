@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotequeAPI.Data
 {
-    interface ITransaction
+    public interface ITransaction
     {
         IEnumerable<Transaction> GetAllTransactions();
         Transaction GetTransactionById(int transactionId);

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BibliotequeAPI.Data
 {
-    interface IBook
+    public interface IUserRepo
     {
-        IEnumerable<Book> GetAllBooks();
-        Book GetBookById(int bookId);
+        IEnumerable<User> GetAllUsers();
+        User GetUserById(int userId);
     }
 }

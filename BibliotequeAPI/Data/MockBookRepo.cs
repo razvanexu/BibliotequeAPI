@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotequeAPI.Data
 {
-    public class MockBookRepo : IBook
+    public class MockBookRepo : IBookRepo
     {
         public IEnumerable<Book> GetAllBooks()
         {

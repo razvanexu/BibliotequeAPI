@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotequeAPI.Data
 {
-    public class MockUserRepo : IUser
+    public class MockUserRepo : IUserRepo
     {
         public IEnumerable<User> GetAllUsers()
         {
