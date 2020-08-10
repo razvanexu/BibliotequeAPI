@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotequeAPI.Migrations
 {
-    [DbContext(typeof(UserContext))]
+    [DbContext(typeof(BibliotequeContext))]
     [Migration("20200804195515_InitialMigration")]
     partial class InitialMigration
     {

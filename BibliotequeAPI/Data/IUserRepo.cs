@@ -8,7 +8,10 @@ namespace BibliotequeAPI.Data
 {
     public interface IUserRepo
     {
+        bool SaveChanges();
         IEnumerable<UserModel> GetAllUsers();
         UserModel GetUserById(int userId);
+        void CreateUser(UserModel user);
+        void UpdateUser(UserModel user );
     }
 }

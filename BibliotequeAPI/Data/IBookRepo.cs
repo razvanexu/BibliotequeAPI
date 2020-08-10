@@ -8,7 +8,10 @@ namespace BibliotequeAPI.Data
 {
     public interface IBookRepo
     {
+        bool SaveChanges();
         IEnumerable<BookModel> GetAllBooks();
         BookModel GetBookById(int bookId);
+        void CreateBook(BookModel book);
+        //void BulkBooks(List<BookModel> books);
     }
 }

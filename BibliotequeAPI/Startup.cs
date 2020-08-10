@@ -1,18 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using BibliotequeAPI.Data;
 using BibliotequeAPI.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace BibliotequeAPI
 {
@@ -28,12 +23,13 @@ namespace BibliotequeAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("BibliotequeConnection")));
+            services.AddDbContext<BibliotequeContext>(opt =>
+                    opt.UseSqlServer(Configuration.GetConnectionString("BibliotequeConnection")));
             services.AddControllers();
-            //services.AddScoped<IUserRepo, MockUserRepo>();
             services.AddScoped<IUserRepo, SQLUserRepo>();
-
-
+            services.AddScoped<IBookRepo, SQLBookRepo>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            //services.AddTokenAuthentication(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +45,8 @@ namespace BibliotequeAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

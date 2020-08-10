@@ -9,11 +9,30 @@ namespace BibliotequeAPI.Data
 {
     public class SQLUserRepo : IUserRepo
     {
-        private readonly UserContext _context;
+        private readonly BibliotequeContext _context;
 
-        public SQLUserRepo(UserContext context)
+        public SQLUserRepo(BibliotequeContext context)
         {
             _context = context;
+        }
+
+        public void CreateUser(UserModel user)
+        {
+            if(user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
+
+            _context.Add(user);
+        }
+
+        public bool SaveChanges()
+        {
+           return (_context.SaveChanges() >= 0);
+        }
+
+        public void UpdateUser(UserModel user)
+        {
         }
 
         IEnumerable<UserModel> IUserRepo.GetAllUsers()
